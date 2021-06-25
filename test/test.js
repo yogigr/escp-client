@@ -1,7 +1,7 @@
 import Escp from "./../index.js";
 import fs from "fs";
 
-const jmljenisbarang = 10;
+const jmljenisbarang = 40;
 
 let escp = new Escp();
 
@@ -24,7 +24,7 @@ const writeHeader = function(escp) {
     escp.text('CITY NAME', 19);
     escp.text('CITY NAME', 26);
     escp.text('ORDER TYPE:', 20, false);
-    escp.text('ORDER TYPE NAME', 15, false);
+    escp.text('ORDER TYPE', 15, false);
     escp.newLine();
     escp.text('PHONE NUMB', 19);
     escp.text('PHONE NUMB', 26);

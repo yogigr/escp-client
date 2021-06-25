@@ -67,7 +67,7 @@ export default class Escp {
     }
 
     text(text, textAreaLength=0, left=true) {
-        if (text.length < textAreaLength) {
+        if (text.length > textAreaLength) {
             text = text.substr(0, textAreaLength);
         }
         let rawText = "";

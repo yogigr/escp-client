@@ -1,6 +1,6 @@
 {
   "name": "@yogigr/escp-client",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Client side for direct printing from browser with simple escp command",
   "main": "index.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "https://github.com/yogigr/escp-client.git"
   },
+  "keywords": ["escp", "printer", "dot matrix", "socket-io", "adapter", "raw printing"],
   "author": "Yogi Gilang Ramadhan <yogigilang182@gmail.com>",
   "license": "ISC",
   "dependencies": {
