@@ -1,0 +1,15 @@
+{
+  "name": "@yogigr/escp-client",
+  "version": "1.0.0",
+  "description": "Client side for direct printing from browser with simple escp command",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "author": "Yogi Gilang Ramadhan <yogigilang182@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io-client": "^4.1.2"
+  }
+}
