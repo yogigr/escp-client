@@ -88,12 +88,10 @@ escp.reset();
 escp.setPrinterArea();
 writeHeader(escp);
 writeBody(escp);
-/*
 if (escp.currentLine >= 36) {
     escp.newPage();
     writeHeader(escp);
 }
-*/
 writeFooter(escp);
 escp.newPage();
 escp.reset();
