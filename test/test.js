@@ -1,7 +1,7 @@
 import Escp from "./../index.js";
 import fs from "fs";
 
-const jmljenisbarang = 40;
+const jmljenisbarang = 26;
 
 let escp = new Escp();
 
@@ -34,7 +34,8 @@ const writeHeader = function(escp) {
     escp.newLine();
     escp.text('-'.repeat(80), 80);
     escp.newLine();
-    escp.text(`ITEM (${jmljenisbarang})`, 35);
+    escp.text('NO ', 4, false)
+    escp.text(`ITEM (${jmljenisbarang})`, 31);
     escp.text("PRICE", 14, false);
     escp.text("QTY", 13, false);
     escp.text("TOTAL", 18, false);
@@ -44,7 +45,8 @@ const writeHeader = function(escp) {
 }
 
 const rowItem = function(escp, index) {
-    escp.text(`Kent & Crew Long Sleeve Suit ${index+1}`, 35);
+    escp.text(`${index+1} `, 4, false)
+    escp.text(`Kent & Crew Long Sleeve Suit ${index+1}`, 31);
     escp.text("140.000", 14, false);
     escp.text("100", 13, false);
     escp.text("14.000.000", 18, false);
@@ -86,16 +88,18 @@ escp.reset();
 escp.setPrinterArea();
 writeHeader(escp);
 writeBody(escp);
-if (escp.currentLine >= 35) {
+/*
+if (escp.currentLine >= 36) {
     escp.newPage();
     writeHeader(escp);
 }
+*/
 writeFooter(escp);
 escp.newPage();
 escp.reset();
 escp.sendRaw();
 
-console.log(escp);
+console.log(escp.currentLine);
 
 fs.writeFile("./test/result.txt", escp.raw, (err) => {
     if (err) {
